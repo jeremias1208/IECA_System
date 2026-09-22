@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+    main section,
+    main article,
+    main form {
+      --scroll-delay: 0ms;
+    }
+  
+  h1, h2, h3, h4, .font-institutional {
+    font-family: 'Newsreader', Georgia, Garamond, serif;
+  }
+
+  body {
+    color: #260202;
+    background-color: #FFFFFF;
+    font-family: 'DM Sans', Arial, sans-serif;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  html.dark body {
+    color: #f4eeee;
+    background-color: #171111;
+  }
+
+  html.dark .bg-white,
+  html.dark .bg-ieca-beige-light,
+  html.dark .bg-ieca-gray-light {
+    background-color: #241b1b !important;
+  }
+
+  html.dark .text-ieca-black {
+    color: #f4eeee !important;
+  }
+
+  html.dark .text-ieca-gray,
+  html.dark .text-gray-400,
+  html.dark .text-gray-500 {
+    color: #c8baba !important;
+  }
+
+  html.dark .border-ieca-gray-border,
+  html.dark .border-gray-200,
+  html.dark .border-gray-300,
+  html.dark .border-gray-100 {
+    border-color: #493838 !important;
+  }
+
+  html.dark input,
+  html.dark textarea,
+  html.dark select {
+    background-color: #241b1b;
+    color: #f4eeee;
+    border-color: #493838;
+  }
+}
+
+/* Custom UI Polish */
+.bg-ieca-pattern {
+  background-color: #F2F2F2;
+  background-image: radial-gradient(#F2636F 0.5px, transparent 0.5px), radial-gradient(#207314 0.5px, #F2F2F2 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-opacity: 0.05;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+/* Sections reveal again when they re-enter the viewport in either direction. */
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 700ms ease var(--scroll-delay), transform 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-delay);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-scroll-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #F2636F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C93643;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes soundWave {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+.animate-sound-wave-1 { animation: soundWave 0.8s ease-in-out infinite 0.1s; }
+.animate-sound-wave-2 { animation: soundWave 0.8s ease-in-out infinite 0.3s; }
+.animate-sound-wave-3 { animation: soundWave 0.8s ease-in-out infinite 0.2s; }
+.animate-sound-wave-4 { animation: soundWave 0.8s ease-in-out infinite 0.4s; }
+
+@media print {
+  header, footer, button, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only-content {
+    display: block !important;
+  }
+}
+
