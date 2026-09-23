@@ -1,5 +1,4 @@
 import React from 'react';
-import defaultHeroImage from '../../data/images/dondi.png';
 
 export interface HeroBannerStat {
   icon: React.ReactNode;
