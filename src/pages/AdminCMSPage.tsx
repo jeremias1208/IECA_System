@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ADMIN_ROLE_DEFINITIONS, ADMIN_ROLE_PERMISSIONS, AuthSession, CMSModule } from '../types';
+import { ANGOLA_PROVINCES } from '../data/provinces';
 import { MOCK_NEWS, MOCK_EVENTS, MOCK_CONGREGATIONS, MOCK_HYMNS, MOCK_RESOURCES } from '../data/mockData';
 import { RecursoAPI, recursosService, fetchCongregations, fetchEvents, fetchNews } from '../services/api';
 import { fetchHinos } from '../services/hinarioApi';
@@ -78,6 +79,8 @@ export const AdminCMSPage: React.FC<AdminCMSPageProps> = ({ session, onLogout })
 
   const modules: { id: CMSModule; label: string; icon: React.ReactNode }[] = [
     { id: 'noticias', label: 'Notícias & Comunicados', icon: <FileText className="w-4 h-4" /> },
+    { id: 'sinodos', label: 'Sínodos & Pastorados', icon: <MapPin className="w-4 h-4" /> },
+    { id: 'artigos', label: 'Artigos & Pregações', icon: <BookOpen className="w-4 h-4" /> },
     { id: 'eventos', label: 'Eventos & Calendário', icon: <Calendar className="w-4 h-4" /> },
     { id: 'congregacoes', label: 'Gestão de Congregações', icon: <MapPin className="w-4 h-4" /> },
     { id: 'hinario', label: 'Gestão do Hinário', icon: <BookOpen className="w-4 h-4" /> },
@@ -470,7 +473,7 @@ export const AdminCMSPage: React.FC<AdminCMSPageProps> = ({ session, onLogout })
                       onChange={(e) => setNewCongregationProvince(e.target.value)}
                       className="w-full p-2.5 text-xs rounded border border-gray-300 bg-white"
                     >
-                      {['Luanda', 'Huambo', 'Benguela', 'Huíla', 'Bié', 'Cabinda', 'Cuanza Sul', 'Malanje', 'Namibe', 'Uíge'].map(p => (
+                      {ANGOLA_PROVINCES.map(p => (
                         <option key={p} value={p}>{p}</option>
                       ))}
                     </select>

@@ -10,6 +10,10 @@ import { MinistriesPage } from './pages/MinistriesPage';
 import { AdminCMSPage } from './pages/AdminCMSPage';
 import { LoginPage } from './pages/LoginPage';
 import { GalleryPage } from './pages/GalleryPage';
+import { DonationsPage } from './pages/DonationsPage';
+import { ContentPage } from './pages/ContentPage';
+import { StreamingPage } from './pages/StreamingPage';
+import { SynodsPage } from './pages/SynodsPage';
 import { MapModal } from './components/ui/MapModal';
 import { AuthSession, Congregation } from './types';
 import { Search, X, MapPin, BookOpen, Newspaper } from 'lucide-react';
@@ -20,7 +24,7 @@ import { SitePreferencesProvider, useSitePreferences } from './context/SitePrefe
 
 function AppContent() {
   const { t } = useSitePreferences();
-  const VALID_PAGES = ['home', 'sobre', 'noticias', 'eventos', 'ministerios', 'hinario', 'congregacoes', 'galeria', 'admin'];
+  const VALID_PAGES = ['home', 'sobre', 'noticias', 'eventos', 'ministerios', 'hinario', 'congregacoes', 'galeria', 'doacoes', 'conteudos', 'transmissoes', 'synodos', 'admin'];
 
   const [currentPage, setCurrentPage] = useState<string>(() => {
     const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
@@ -149,7 +153,7 @@ function AppContent() {
           <HymnalPage />
         )}
         {currentPage === 'sobre' && (
-          <AboutPage />
+          <AboutPage onNavigate={handleNavigate} />
         )}
         {currentPage === 'noticias' && (
           <NewsEventsPage />
@@ -162,6 +166,18 @@ function AppContent() {
         )}
         {currentPage === 'galeria' && (
           <GalleryPage />
+        )}
+        {currentPage === 'doacoes' && (
+          <DonationsPage />
+        )}
+        {currentPage === 'conteudos' && (
+          <ContentPage />
+        )}
+        {currentPage === 'transmissoes' && (
+          <StreamingPage />
+        )}
+        {currentPage === 'synodos' && (
+          <SynodsPage onNavigate={handleNavigate} />
         )}
         {currentPage === 'admin' && !authSession && (
           <LoginPage onLogin={handleLogin} onBack={() => handleNavigate('home')} />

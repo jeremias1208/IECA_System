@@ -6,9 +6,21 @@ export type Province =
   | 'Bié' 
   | 'Cabinda' 
   | 'Cuanza Sul' 
+  | 'Cuanza Norte'
   | 'Malanje' 
   | 'Namibe' 
-  | 'Uíge';
+  | 'Uíge'
+  | 'Bengo'
+  | 'Cuando'
+  | 'Cubango'
+  | 'Cunene'
+  | 'Icolo e Bengo'
+  | 'Lunda Norte'
+  | 'Lunda Sul'
+  | 'Moxico'
+  | 'Moxico Leste'
+  | 'Zaire'
+  | string;
 
 export type CongregationStatus = 'ATIVA' | 'A_VALIDAR' | 'INATIVA' | 'NAO_CONFIRMADA';
 
@@ -218,4 +230,80 @@ export type CMSModule =
   | 'congregacoes' 
   | 'hinario' 
   | 'documentos' 
+  | 'sinodos'
+  | 'artigos'
   | 'usuarios';
+
+export interface Pastorate {
+  id: string;
+  name: string;
+  location: string;
+  province: Province;
+  pastor: string;
+  establishedYear?: number;
+  contact?: string;
+}
+
+export interface ProvincialSynod {
+  id: string;
+  name: string;
+  regionType: 'Sínodo Provincial' | 'Área Missionária';
+  province: Province;
+  secretaryName: string;
+  secretaryTitle: string; // Ex: 'Secretário Provincial', 'Representante Legal'
+  secretaryPhoto: string;
+  secretaryBio: string;
+  headquarters: string;
+  email?: string;
+  phone?: string;
+  pastorates: Pastorate[];
+}
+
+export interface Author {
+  id: string;
+  name: string;
+  role: string;
+  photo: string;
+  bio: string;
+  email?: string;
+}
+
+export interface ArticleItem {
+  id: string;
+  title: string;
+  summary: string;
+  content: string;
+  category: 'Artigo' | 'Estudo Bíblico' | 'Pregação' | 'Reflexão';
+  authorId: string;
+  authorName: string;
+  authorRole: string;
+  authorPhoto: string;
+  date: string;
+  readTime: string;
+  scriptureReference?: string;
+  imageUrl?: string;
+}
+
+export interface LiveStream {
+  id: string;
+  title: string;
+  speaker: string;
+  eventDate: string;
+  time: string;
+  status: 'Ao Vivo' | 'Agendada' | 'Gravada';
+  embedUrl?: string; // e.g. YouTube or Facebook embed url
+  platformUrl: string; // Direct Facebook/YouTube link
+  platformName: 'Facebook Live' | 'YouTube Live' | 'Outro';
+  thumbnailUrl: string;
+  description: string;
+}
+
+export interface DonationOption {
+  id: string;
+  bankName: string;
+  accountName: string;
+  iban: string;
+  swift?: string;
+  currency: string;
+  purpose: string;
+}

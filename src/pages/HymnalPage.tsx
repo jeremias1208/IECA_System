@@ -39,6 +39,7 @@ export const HymnalPage = () => {
   const [fontSize, setFontSize] = useState<number>(16);
   const [copied, setCopied] = useState(false);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [mobileViewMode, setMobileViewMode] = useState<'list' | 'reader'>('list');
   const audioCtxRef = useRef<AudioContext | null>(null);
 
   const categories = ['Todas', 'Louvor', 'Oração', 'Ação de Graças', 'Natal', 'Páscoa', 'Missões', 'Fé & Confiança'];
@@ -277,9 +278,33 @@ export const HymnalPage = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-12 gap-8">
+      {/* Mobile Mode Toggle (List vs Reader) */}
+      <div className="flex sm:hidden bg-gray-100 p-1.5 rounded-btn border border-gray-200 gap-1">
+        <button
+          onClick={() => setMobileViewMode('list')}
+          className={`flex-1 py-2 text-xs font-bold rounded-btn transition-all ${
+            mobileViewMode === 'list'
+              ? 'bg-ieca-black text-white shadow-sm'
+              : 'text-gray-600 hover:text-black'
+          }`}
+        >
+          📋 Lista & Filtros
+        </button>
+        <button
+          onClick={() => setMobileViewMode('reader')}
+          className={`flex-1 py-2 text-xs font-bold rounded-btn transition-all ${
+            mobileViewMode === 'reader'
+              ? 'bg-ieca-coral text-white shadow-sm'
+              : 'text-gray-600 hover:text-black'
+          }`}
+        >
+          📖 Leitura da Letra
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: List & Filter */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className={`lg:col-span-5 space-y-6 ${mobileViewMode === 'reader' ? 'hidden sm:block' : 'block'}`}>
           <div className="bg-white p-5 rounded-card border border-ieca-gray-border shadow-sm space-y-4">
             <div className="relative">
               <Search className="w-5 h-5 text-gray-400 absolute left-3.5 top-3.5" />
@@ -350,7 +375,7 @@ export const HymnalPage = () => {
                   return (
                     <div
                       key={hymn.id}
-                      onClick={() => setSelectedHymn(hymn)}
+                      onClick={() => { setSelectedHymn(hymn); setMobileViewMode('reader'); }}
                       className={`w-full text-left p-4 hover:bg-ieca-coral-light transition-colors flex items-center justify-between cursor-pointer ${
                         selectedHymn?.id === hymn.id ? 'bg-ieca-coral-light border-l-4 border-ieca-coral font-semibold' : ''
                       }`}
@@ -391,7 +416,7 @@ export const HymnalPage = () => {
                 filteredLiturgical.map(item => (
                   <button
                     key={item.id}
-                    onClick={() => setSelectedLiturgical(item)}
+                    onClick={() => { setSelectedLiturgical(item); setMobileViewMode('reader'); }}
                     className={`w-full text-left p-4 hover:bg-ieca-coral-light transition-colors flex items-center justify-between ${
                       selectedLiturgical?.id === item.id ? 'bg-ieca-coral-light border-l-4 border-ieca-coral font-semibold' : ''
                     }`}
@@ -419,7 +444,7 @@ export const HymnalPage = () => {
         </div>
 
         {/* Right Column: Reader Display using HtmlView */}
-        <div className="lg:col-span-7">
+        <div className={`lg:col-span-7 ${mobileViewMode === 'list' ? 'hidden sm:block' : 'block'}`}>
           <div className="bg-white rounded-card border border-ieca-gray-border shadow-lg p-6 sm:p-8 space-y-6 sticky top-24">
             {(activeSection === 'hinos' || activeSection === 'favoritos') && selectedHymn ? (
               <>

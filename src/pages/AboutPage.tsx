@@ -17,7 +17,11 @@ import { HeroBanner } from '../components/ui/HeroBanner';
 import { useSitePreferences } from '../context/SitePreferencesContext';
 import imgDondi from '../data/images/dondi.png';
 
-export const AboutPage: React.FC = () => {
+interface AboutPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   const { t } = useSitePreferences();
   const [leadership, setLeadership] = useState<LeadershipMember[]>(MOCK_LEADERSHIP);
 
@@ -326,6 +330,31 @@ export const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* SÍNODOS PROVINCIAIS E ÁREAS MISSIONÁRIAS CARD BANNER */}
+      <div id="sinodos-provinciais" className="bg-gradient-to-r from-gray-900 via-ieca-black to-gray-900 text-white p-8 sm:p-10 rounded-card border border-gray-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div className="space-y-3 max-w-2xl text-center md:text-left z-10">
+          <span className="text-xs font-bold uppercase tracking-widest text-ieca-gold bg-ieca-gold/10 px-3 py-1 rounded-full border border-ieca-gold/20">
+            Estrutura Institucional Regional
+          </span>
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl text-white">
+            Sínodos Provinciais & Áreas Missionárias
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            Conheça os Sínodos Provinciais (Luanda, Huambo, Bié, Benguela), Áreas Missionárias, Secretários Provinciais, Representantes Legais e a lista completa de Pastorados com filtro por província.
+          </p>
+        </div>
+
+        {onNavigate && (
+          <button
+            onClick={() => onNavigate('synodos')}
+            className="z-10 px-6 py-3.5 bg-ieca-coral hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-btn shadow-lg transition-all flex items-center gap-2 whitespace-nowrap"
+          >
+            <span>Ver Sínodos & Pastorados por Província</span>
+            <span className="text-sm">→</span>
+          </button>
+        )}
       </div>
 
       {/* 3. ESTRUTURA ORGANIZACIONAL (8 NÍVEIS) */}

@@ -1,9 +1,26 @@
-import { Congregation, Hymn, NewsItem, EventItem, Ministry, LeadershipMember, ResourceDoc, SocialProject } from '../types';
+import { 
+  Congregation, 
+  Hymn, 
+  NewsItem, 
+  EventItem, 
+  Ministry, 
+  LeadershipMember, 
+  ResourceDoc, 
+  SocialProject,
+  ProvincialSynod,
+  Author,
+  ArticleItem,
+  LiveStream,
+  DonationOption
+} from '../types';
 import secretarioExecutivoPhoto from './images/SecretarioExecutivo.jpg';
 import secretarioGeralPhoto from './images/SecretarioGeral.jpg';
 import juventudePhoto from './images/Juventude.jpg';
 import secretariosPhoto from './images/Secreratios.jpg';
 import pastoresPhotp from './images/Pastores.jpg';
+import festividadesJubilaresPhoto from './images/FESTIVIDADES JUBILARES DE 2027.jpg';
+import ensaios from './images/image.png';
+import oseias from './images/oseiass.jpg';
 
 export const MOCK_CONGREGATIONS: Congregation[] = [
   {
@@ -331,6 +348,17 @@ export const MOCK_HYMNS: Hymn[] = [
 
 export const MOCK_NEWS: NewsItem[] = [
   {
+    id: 'news-jubileu-luanda-2027',
+    title: 'Sínodo Provincial de Luanda já vive as Festividades Jubilares de 2027',
+    summary: 'MECOL acolheu o lançamento oficial das festividades que culminarão com o Jubileu de Ouro, de 9 a 13 de Junho de 2027.',
+    content: 'Caiu o pano, este domingo, sobre o lançamento oficial das Festividades Jubilares do Sínodo Provincial de Luanda da IECA. Durante os dias 15 e 16 de Agosto, a Missão Evangélica Congregacional de Luanda (MECOL), em Catete, acolheu membros da Igreja, lideranças e convidados para o início das celebrações que culminarão com o Jubileu de Ouro, de 9 a 13 de Junho de 2027.\n\nA abertura foi presidida pela Sua Revma. Luciano Chanhelela Chianeque, Secretária Geral da IECA, e ficou marcada pelo acender da fogueira jubilar, testemunhado pelo Colégio de Pastores, membros da Igreja e convidados.\n\nApós o culto de abertura realizou-se o Festival da Canção, que reuniu as Sociedades de Jovens, Média e Mulheres dos três Sínodos locais de Luanda, com a participação de músicos e grupos da IECA. As sociedades do Sínodo Local da Samba foram anunciadas como vencedoras.\n\nNo domingo realizou-se o Culto de Adoração e Acção de Graças, com a presença de Secretários Provinciais, pastores do Sínodo Provincial do Huambo, esposas de pastores, membros da IECA e convidados. Durante o culto, a MECOL homenageou filhos da IECA pelo contributo prestado à missão e à Igreja.\n\nMais de cinco mil fiéis acompanharam a mensagem baseada em Neemias 2:17-18, sob o tema “Levantemo-nos e edifiquemos”. A reflexão apelou à confiança em Deus e destacou os muros familiares, de confiança, disciplina espiritual e compromisso com Deus que precisam de restauração.\n\nCom o lançamento das festividades, o Sínodo Provincial de Luanda inicia a caminhada rumo ao Jubileu de Ouro, reunindo a Igreja em torno da gratidão, memória, comunhão e renovação do compromisso com Deus e com a missão da IECA. Todos os fiéis estão convidados a fazer parte da Festa Jubilar de 2027.',
+    category: 'Institucional',
+    date: '16 de Agosto de 2026',
+    author: 'Secretaria Geral de Comunicação',
+    image: festividadesJubilaresPhoto,
+    readTime: '8 min'
+  },
+  {
     id: 'news-1',
     title: 'Sínodo Geral Reúne Delegados em Luanda para Definir Linhas Estratégicas 2026–2030',
     summary: 'Líderes de todas as províncias de Angola encontram-se na Capital para deliberar sobre a expansão educacional, ação social e transformação digital da IECA.',
@@ -362,6 +390,17 @@ export const MOCK_NEWS: NewsItem[] = [
     author: 'Juventude IECA',
     image: juventudePhoto,
     readTime: '5 min'
+  },
+  {
+    id: 'news-4',
+    title: 'Acompanhe as Notícias e Atualizações Diárias na Página Oficial do Facebook da IECA',
+    summary: 'Acompanhe fotos, comunicados de imprensa, cultos ao vivo e publicações oficiais diretamente na nossa página do Facebook.',
+    content: 'A Igreja Evangélica Congregacional em Angola reforça a sua presença digital através da sua página oficial do Facebook (https://www.facebook.com/profile.php?id=61594335956813). Siga-nos para acompanhar diariamente noticias das congregações, pronunciamentos da liderança e eventos culturais e missionários.',
+    category: 'Institucional',
+    date: '22 de Setembro de 2026',
+    author: 'Gabinete de Imprensa IECA / Facebook',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800',
+    readTime: '2 min'
   }
 ];
 
@@ -464,13 +503,13 @@ export const MOCK_MINISTRIES: Ministry[] = [
   },
   {
     id: 'min-6',
-    name: 'Ministério Infantil',
-    code: 'CRIANÇAS',
-    description: 'Formação moral, espiritual e pedagógica das crianças através de histórias bíblicas e cânticos de louvor.',
-    audience: 'Crianças dos 3 aos 14 Anos',
-    activities: ['Escola Dominical Infantil', 'Coral Infantil Local', 'Escola Bíblica de Férias'],
-    leaderName: 'Prof. [INSERIR LÍDER INFANTIL]',
-    leaderRole: 'Coordenadora Pedagógica Infantil',
+    name: 'Coordenação de Crianças e Adolescentes',
+    code: 'CRIANÇAS_ADOLESCENTES',
+    description: 'Formação moral, espiritual e pedagógica das crianças e adolescentes através de ensino bíblico, coro infantil e atividades recreativas congregacionais.',
+    audience: 'Crianças e Adolescentes (3 aos 17 Anos)',
+    activities: ['Escola Dominical Infantil & Infantojuvenil', 'Coral de Crianças e Adolescentes', 'Escola Bíblica de Férias'],
+    leaderName: 'Prof.ª Maria Esperança',
+    leaderRole: 'Coordenadora Geral de Crianças e Adolescentes',
     iconName: 'Smile',
     image: 'https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&q=80&w=800'
   },
@@ -739,4 +778,282 @@ export const MOCK_GALLERY_ITEMS = [
     description: 'Vista panorâmica do pôr do sol nos arredores da Sede Nacional da IECA no Morro Bento.'
   }
 ];
+
+export const MOCK_SYNODS: ProvincialSynod[] = [
+  {
+    id: 'sin-1',
+    name: 'Sínodo Provincial de Luanda',
+    regionType: 'Sínodo Provincial',
+    province: 'Luanda',
+    secretaryName: 'Rev. Pedro Chicassa',
+    secretaryTitle: 'Secretário Provincial / Representante Legal',
+    secretaryPhoto: secretarioExecutivoPhoto,
+    secretaryBio: 'Servo de Deus com mais de 25 anos de ministério pastoral, liderando a edificação espiritual e expansão missionária das congregações na Província de Luanda.',
+    headquarters: 'Morro Bento II, Belas, Luanda',
+    email: 'sinodo.luanda@ieca.ao',
+    phone: '+244 923 111 222',
+    pastorates: [
+      { id: 'past-1', name: 'Pastorado Urbano de Luanda (Igreja Central)', location: 'Morro Bento, Belas', province: 'Luanda', pastor: 'Rev. Pedro Chicassa', establishedYear: 1975 },
+      { id: 'past-2', name: 'Pastorado de Viana', location: 'Viana Sede', province: 'Luanda', pastor: 'Rev. Joaquim Vunge', establishedYear: 1988 },
+      { id: 'past-3', name: 'Pastorado de Cacuaco', location: 'Cacuaco Centro', province: 'Luanda', pastor: 'Rev.ª Ana Isabel', establishedYear: 1995 },
+      { id: 'past-4', name: 'Pastorado de Cazenga', location: 'Tala Hady, Cazenga', province: 'Luanda', pastor: 'Pastor Simão Pedro', establishedYear: 2002 }
+    ]
+  },
+  {
+    id: 'sin-2',
+    name: 'Sínodo Provincial do Huambo',
+    regionType: 'Sínodo Provincial',
+    province: 'Huambo',
+    secretaryName: 'Rev. Isaac Kalumbu',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: secretarioGeralPhoto,
+    secretaryBio: 'Teólogo e líder apaixonado pela revitalização do património missionário histórico do Huambo, berço congregacional de Chilume e Dôndi.',
+    headquarters: 'Cidade do Huambo',
+    email: 'sinodo.huambo@ieca.ao',
+    phone: '+244 923 333 444',
+    pastorates: [
+      { id: 'past-5', name: 'Pastorado de Chilume - Bailundo', location: 'Bailundo', province: 'Huambo', pastor: 'Rev. Daniel Sangueve', establishedYear: 1881 },
+      { id: 'past-6', name: 'Pastorado do Elende', location: 'Cuma', province: 'Huambo', pastor: 'Rev. Manuel Chissola', establishedYear: 1906 },
+      { id: 'past-7', name: 'Pastorado do Dôndi / Lutamo', location: 'Catchiungo', province: 'Huambo', pastor: 'Rev. Abel Cangoya', establishedYear: 1914 },
+      { id: 'past-8', name: 'Pastorado Urbano de Nova Lisboa (Huambo)', location: 'Huambo Cidade', province: 'Huambo', pastor: 'Rev. Tomás Chipenda', establishedYear: 1926 }
+    ]
+  },
+  {
+    id: 'sin-3',
+    name: 'Sínodo Provincial do Bié',
+    regionType: 'Sínodo Provincial',
+    province: 'Bié',
+    secretaryName: 'Rev. Barnabé Tchissingui',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: pastoresPhotp,
+    secretaryBio: 'Líder dedicado ao reforço comunitário, saúde e educação no Bié, supervisionando as históricas missões de Camundongo e Chissamba.',
+    headquarters: 'Kuito, Bié',
+    email: 'sinodo.bie@ieca.ao',
+    phone: '+244 923 555 666',
+    pastorates: [
+      { id: 'past-9', name: 'Pastorado de Camundongo', location: 'Camundongo, Kuito', province: 'Bié', pastor: 'Rev. Elias Festus', establishedYear: 1884 },
+      { id: 'past-10', name: 'Pastorado de Chissamba', location: 'Catabola', province: 'Bié', pastor: 'Rev. Mário Somacala', establishedYear: 1888 },
+      { id: 'past-11', name: 'Pastorado de Chilesso', location: 'Andulo', province: 'Bié', pastor: 'Rev. Alfredo Chivala', establishedYear: 1904 },
+      { id: 'past-12', name: 'Pastorado de Silva Porto (Kuito Urbano)', location: 'Kuito Sede', province: 'Bié', pastor: 'Rev. Artur Sangueve', establishedYear: 1918 }
+    ]
+  },
+  {
+    id: 'sin-4',
+    name: 'Sínodo Provincial de Benguela',
+    regionType: 'Sínodo Provincial',
+    province: 'Benguela',
+    secretaryName: 'Rev. Salomão Chinjamba',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: secretariosPhoto,
+    secretaryBio: 'Pastoreia o litoral sul angolano promovendo acção social, coral comunitária e expansão nas áreas urbanas e periurbanas de Benguela e Lobito.',
+    headquarters: 'Lobito, Benguela',
+    email: 'sinodo.benguela@ieca.ao',
+    phone: '+244 923 777 888',
+    pastorates: [
+      { id: 'past-13', name: 'Pastorado do Lobito', location: 'Lobito Sede', province: 'Benguela', pastor: 'Rev. Salomão Chinjamba', establishedYear: 1924 },
+      { id: 'past-14', name: 'Pastorado de Benguela Cidade', location: 'Benguela Centro', province: 'Benguela', pastor: 'Rev.ª Teresa Hossi', establishedYear: 1930 },
+      { id: 'past-15', name: 'Pastorado da Ganda', location: 'Ganda', province: 'Benguela', pastor: 'Pastor José Vihemba', establishedYear: 1945 }
+    ]
+  },
+  {
+    id: 'sin-5',
+    name: 'Área Missionária da Lunda Sul e Leste',
+    regionType: 'Área Missionária',
+    province: 'Luanda',
+    secretaryName: 'Rev. Mateus Cassela',
+    secretaryTitle: 'Representante Legal de Missão',
+    secretaryPhoto: secretariosPhoto,
+    secretaryBio: 'Coordena o trabalho pioneiro e plantação de congregações no leste do país, focado na expansão evangelística e apoio social.',
+    headquarters: 'Saurimo, Lunda Sul',
+    email: 'missao.leste@ieca.ao',
+    phone: '+244 923 999 000',
+    pastorates: [
+      { id: 'past-16', name: 'Pastorado Urbano de Saurimo', location: 'Saurimo Sede', province: 'Luanda', pastor: 'Rev. Mateus Cassela', establishedYear: 2005 },
+      { id: 'past-17', name: 'Pastorado Missionário de Luena', location: 'Luena, Moxico', province: 'Luanda', pastor: 'Pastor Gabriel Soma', establishedYear: 2012 }
+    ]
+  }
+];
+
+export const MOCK_AUTHORS: Author[] = [
+  {
+    id: 'aut-1',
+    name: 'Sua Rev.ª Dr. Luciano Chanhelela Chianeque',
+    role: 'Secretário-Geral da IECA',
+    photo: secretarioGeralPhoto,
+    bio: '8º Secretário-Geral da Igreja Evangélica Congregacional em Angola. Doutor em Teologia e liderança eclesiástica, com vasta obra publicada sobre missão congregacional e ética cristã.',
+    email: 'secretariado.geral@ieca.ao'
+  },
+  {
+    id: 'aut-2',
+    name: 'Rev. Pedro Chicassa',
+    role: 'Secretário Provincial de Luanda',
+    photo: secretarioExecutivoPhoto,
+    bio: 'Teólogo, docente bíblico e preletor dedicado ao estudo exegético do Novo Testamento e consolidação das famílias cristãs.',
+    email: 'pedro.chicassa@ieca.ao'
+  },
+  {
+    id: 'aut-3',
+    name: 'Rev.ª Dra. Ana Isabel',
+    role: 'Docente de Teologia e Educação Cristã',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800',
+    bio: 'Especialista em Educação Cristã e Coordenação de Crianças e Adolescentes, focada no desenvolvimento espiritual da infância e juventude.',
+    email: 'ana.isabel@ieca.ao'
+  }
+];
+
+export const MOCK_ARTICLES: ArticleItem[] = [
+  {
+    id: 'art-1',
+    title: 'A Relevância do Legado Congregacional e o Futuro da IECA',
+    summary: 'Uma reflexão teológica sobre os 145 anos de missão congregacional em Angola, desafios do século XXI e o compromisso com a transformação social.',
+    content: `A Igreja Evangélica Congregacional em Angola (IECA) carrega uma história viva que remonta a 1880, quando os primeiros missionários aportaram no Bailundo. A nossa vocação congregacional fundamenta-se na autonomia da igreja local, na soberania de Cristo como único Cabeça da Igreja e na corresponsabilidade de cada crente na edificação do Reino de Deus.
+
+Hoje, diante dos desafios socioeconómicos e culturais do século XXI, o nosso compromisso renova-se: ser sal da terra e luz do mundo através da educação, da saúde, do cuidado integral com a família e da fidelidade ao Evangelho de Nosso Senhor Jesus Cristo.`,
+    category: 'Artigo',
+    authorId: 'aut-1',
+    authorName: 'Sua Rev.ª Dr. Luciano Chanhelela Chianeque',
+    authorRole: 'Secretário-Geral da IECA',
+    authorPhoto: secretarioGeralPhoto,
+    date: '20 de Setembro de 2026',
+    readTime: '6 min de leitura',
+    scriptureReference: 'Efésios 4:11-16',
+    imageUrl: secretarioGeralPhoto
+  },
+  {
+    id: 'art-2',
+    title: 'Estudo Bíblico: Vivendo a Unidade no Corpo de Cristo',
+    summary: 'Análise detalhada do texto de 1 Coríntios 12 sobre os dons espirituais e a cooperação mútua na vida congregacional.',
+    content: `Na primeira carta de Paulo aos Coríntios, capitulo 12, encontramos uma das mais belas metáforas para a igreja: o corpo humano. Assim como um corpo é composto por muitos membros, cada qual com uma função única e indispensável, assim também é a IECA nas suas congregações, sínodos e departamentos.
+
+1. **A Diversidade dos Dons:** O Espírito Santo concede dons variados a cada crente não para exaltação pessoal, mas para a edificação comum.
+2. **A Interdependência:** Nenhum membro pode dizer ao outro 'não preciso de ti'. A força do nosso testemunho reside na união dos corações.
+3. **O Amor como Caminho Excelente:** Sem amor, os maiores dons tornam-se como o metal que soa ou como o prato que retine.`,
+    category: 'Estudo Bíblico',
+    authorId: 'aut-2',
+    authorName: 'Rev. Pedro Chicassa',
+    authorRole: 'Secretário Provincial de Luanda',
+    authorPhoto: secretarioExecutivoPhoto,
+    date: '15 de Setembro de 2026',
+    readTime: '8 min de leitura',
+    scriptureReference: '1 Coríntios 12:12-27',
+    imageUrl: secretariosPhoto
+  },
+  {
+    id: 'art-3',
+    title: 'Pregação: A Fé que Transforma Famílias e Gerações',
+    summary: 'Mensagem proferida no Culto Festivo dos 55 anos de Autonomia da IECA sobre a importância da transmissão da fé no lar.',
+    content: `Deus planeou o lar como o primeiro altar e a primeira escola de fé. Quando olhamos para a história da nossa igreja, vemos famílias inteiras que permaneceram firmes em tempos de provação, alimentadas pela Palavra de Deus e pela oração comunitária.
+
+Nesta geração, somos chamados a investir intencionalmente na Coordenação de Crianças e Adolescentes, incutindo valores morais e espirituais sólidos desde a mais tenra idade. Que as nossas casas continuem a ser santuários de paz e testemunho vivo do amor divino.`,
+    category: 'Pregação',
+    authorId: 'aut-1',
+    authorName: 'Sua Rev.ª Dr. Luciano Chanhelela Chianeque',
+    authorRole: 'Secretário-Geral da IECA',
+    authorPhoto: secretarioGeralPhoto,
+    date: '08 de Setembro de 2026',
+    readTime: '10 min de leitura',
+    scriptureReference: 'Deuteronómio 6:4-9',
+    imageUrl: pastoresPhotp
+  },
+  {
+    id: 'art-4',
+    title: 'Reflexão: Formação Bíblica de Crianças e Adolescentes na Atualidade',
+    summary: 'Como pais, educadores e a igreja podem responder estrategicamente às influências digitais e formar uma juventude com raízes cristãs profundas.',
+    content: `Os desafios que as nossas crianças e adolescentes enfrentam hoje no ambiente digital exigem da igreja uma pedagogia renovada e acolhedora. Não basta proibir; é necessário ensinar a discernir com sabedoria.
+
+A Coordenação de Crianças e Adolescentes da IECA tem desempenhado um papel crucial com programas didáticos, cantares, escolas dominicais e acampamentos que alinham a verdade bíblica com metodologias contemporâneas e interativas.`,
+    category: 'Reflexão',
+    authorId: 'aut-3',
+    authorName: 'Rev.ª Dra. Ana Isabel',
+    authorRole: 'Docente de Teologia e Educação Cristã',
+    authorPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800',
+    date: '01 de Setembro de 2026',
+    readTime: '5 min de leitura',
+    scriptureReference: 'Provérbios 22:6',
+    imageUrl: juventudePhoto
+  }
+];
+
+export const MOCK_STREAMS: LiveStream[] = [
+  {
+    id: 'str-1',
+    title: 'Culto Festivo de Domingo - Sede Nacional IECA',
+    speaker: 'Sua Rev.ª Dr. Luciano Chanhelela Chianeque',
+    eventDate: 'Domingo Próximo',
+    time: '09:00 - 11:30',
+    status: 'Ao Vivo',
+    embedUrl: 'https://www.youtube.com/embed/eSjkajq73kg?autoplay=1',
+    platformUrl: 'https://www.facebook.com/profile.php?id=61594335956813',
+    platformName: 'Facebook Live',
+    thumbnailUrl: secretarioExecutivoPhoto,
+    description: 'Transmissão em direto do Culto Solene de Adoração, Celebração da Ceia do Senhor e Pregação da Palavra na Sede Nacional da IECA no Morro Bento.'
+  },
+  {
+    id: 'str-2',
+    title: 'Estudo Bíblico Semanal & Hora da Oração',
+    speaker: 'Rev. Pedro Chicassa',
+    eventDate: 'Quarta-feira',
+    time: '18:00 - 19:30',
+    status: 'Agendada',
+    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL3x8x6lWJt_y-h-K-K5f3t&autoplay=0',
+    platformUrl: 'https://www.youtube.com/@jeremiasevaristo8215',
+    platformName: 'YouTube Live',
+    thumbnailUrl: secretariosPhoto,
+    description: 'Momento de aprofundamento na Palavra de Deus, intercessão pelas famílias, doentes, nação angolana e missões da igreja.'
+  },
+  {
+    id: 'str-3',
+    title: 'Ensaios: Concerto Clamor da Alma',
+    speaker: 'Jeremias Edson Evaristo',
+    eventDate: '13/09/2024',
+    time: '6min 37seg',
+    status: 'Gravada',
+    embedUrl: 'https://www.youtube.com/embed/pILHmA97FiU?autoplay=1',
+    platformUrl: 'https://www.youtube.com/@jeremiasevaristo8215',
+    platformName: 'YouTube Live',
+    thumbnailUrl: ensaios,
+    description: ' Ensaios: Concerto Clamor da Alma'
+  },
+  {
+    id: 'str-4',
+    title: 'Concerto: Gratidão - Te adoramos por isso Celebramos',
+    speaker: 'Irmão Oséias Kufa',
+    eventDate: '08/11/2025',
+    time: '1hora 34min 15seg',
+    status: 'Gravada',
+    embedUrl: 'https://www.youtube.com/embed/eSjkajq73kg?autoplay=1',
+    platformUrl: 'https://www.youtube.com/@jeremiasevaristo8215',
+    platformName: 'YouTube Live',
+    thumbnailUrl: oseias,
+    description: 'Live com Irmão Oséias Kufa | Gratidão - Te adoramos por isso Celebramos - 08/11/2025'
+  }
+];
+
+export const MOCK_DONATION_ACCOUNTS: DonationOption[] = [
+  {
+    id: 'don-1',
+    bankName: 'Banco BIC (Banco Insular de Crédito)',
+    accountName: 'Igreja Evangélica Congregacional em Angola - Sede Nacional',
+    iban: 'AO06 0051 0000 1234 5678 1014 9',
+    currency: 'AOA (Kwanza)',
+    purpose: 'Dízimos, Ofertas Gerais & Fundo Operacional da Igreja'
+  },
+  {
+    id: 'don-2',
+    bankName: 'BAI (Banco Angolano de Investimentos)',
+    accountName: 'IECA - Departamento de Ação Social e Missões',
+    iban: 'AO06 0040 0000 9876 5432 1019 3',
+    currency: 'AOA (Kwanza)',
+    purpose: 'Projetos Sociais (Escolas, Postos de Saúde & Perfuração de Poços)'
+  },
+  {
+    id: 'don-3',
+    bankName: 'BFA (Banco de Fomento Angola)',
+    accountName: 'IECA - Departamento de Construção e Património',
+    iban: 'AO06 0006 0000 4567 8901 1015 2',
+    currency: 'AOA (Kwanza)',
+    purpose: 'Reabilitação do Património Histórico (Dôndi, Chilume, Camundongo)'
+  }
+];
+
 

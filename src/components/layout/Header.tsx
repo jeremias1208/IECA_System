@@ -15,13 +15,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate, onSearc
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
 
   const navLinks = [
-    { id: 'home', label: t('home') },
-    { id: 'sobre', label: t('about') },
-    { id: 'noticias', label: t('news') },
-    { id: 'eventos', label: t('events') },
-    { id: 'ministerios', label: t('ministries') },
-    { id: 'galeria', label: t('gallery') },
-    { id: 'hinario', label: t('hymnal') }
+    { id: 'home', label: 'Início' },
+    { id: 'sobre', label: 'Sobre a IECA' },
+    { id: 'conteudos', label: 'Conteúdos' },
+    { id: 'noticias', label: 'Notícias' },
+    { id: 'ministerios', label: 'Vida da Igreja' },
+    { id: 'hinario', label: 'Hinário' },
+    { id: 'transmissoes', label: 'Transmissões' },
+    { id: 'galeria', label: 'Galeria' }
   ];
 
   const handleNavClick = (id: string) => {
@@ -105,14 +106,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate, onSearc
         </button>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 font-sans text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-0.5 font-sans text-xs xl:text-sm font-medium">
           {navLinks.map((link) => {
             const isActive = currentPage === link.id;
             return (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`px-3.5 py-2 border-b-2 transition-all duration-200 ${
+                className={`px-2.5 xl:px-3 py-2 border-b-2 transition-all duration-200 ${
                   isActive 
                     ? 'text-ieca-coral font-semibold border-ieca-coral' 
                     : 'text-ieca-black border-transparent hover:text-ieca-coral hover:border-ieca-coral/40'
@@ -125,17 +126,25 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate, onSearc
         </nav>
 
         {/* Primary CTA Buttons */}
-        <div className="hidden sm:flex items-center gap-2.5">
+        <div className="hidden sm:flex items-center gap-2">
+          {/*<button
+            onClick={() => handleNavClick('doacoes')}
+            className={`px-3 py-2 rounded-btn font-bold text-xs transition-all shadow-sm ${
+              currentPage === 'doacoes' 
+                ? 'bg-ieca-gold text-white' 
+                : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300'
+            }`}
+          >
+            Apoie a IECA
+          </button>*/}
+
           <button
             onClick={() => handleNavClick('congregacoes')}
-            className="flex items-center gap-2 bg-ieca-coral hover:bg-ieca-coral-hover text-white px-3.5 py-2 rounded-btn font-semibold text-xs shadow-md hover:shadow-lg transition-all duration-200"
+            className="flex items-center gap-1.5 bg-ieca-coral hover:bg-ieca-coral-hover text-white px-3 py-2 rounded-btn font-semibold text-xs shadow-md transition-all duration-200"
           >
             <MapPin className="w-3.5 h-3.5" />
-            <span>{t('congregations')}</span>
+            <span>Igrejas</span>
           </button>
-
-          
-          
         </div>
 
         {/* Mobile Menu Toggle */}

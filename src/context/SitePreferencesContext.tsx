@@ -94,7 +94,7 @@ export const SitePreferencesProvider: React.FC<{ children: React.ReactNode }> = 
   const [theme, setTheme] = useState<SiteTheme>(() => {
     const saved = window.localStorage.getItem('ieca-theme');
     if (saved === 'dark' || saved === 'light') return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   });
 
   const setLanguage = (nextLanguage: SiteLanguage) => {

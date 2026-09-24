@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { MOCK_CONGREGATIONS } from '../data/mockData';
 import { CongregationCard } from '../components/ui/Cards';
-import { Province, Congregation } from '../types';
+import { Province, Congregation } from '../types/index';
+import { ANGOLA_PROVINCES } from '../data/provinces';
 import { Search, MapPin, Filter, Building2 } from 'lucide-react';
 import { fetchCongregations } from '../services/api';
 import { HeroBanner } from '../components/ui/HeroBanner';
@@ -11,20 +12,6 @@ import photoCongregacao from '../data/images/mapa.png';
 interface CongregationsPageProps {
   onOpenMapModal: (congregation?: Congregation) => void;
 }
-
-const PROVINCES: (Province | 'Todas')[] = [
-  'Todas',
-  'Luanda',
-  'Huambo',
-  'Benguela',
-  'Huíla',
-  'Bié',
-  'Cabinda',
-  'Cuanza Sul',
-  'Malanje',
-  'Namibe',
-  'Uíge'
-];
 
 export const CongregationsPage: React.FC<CongregationsPageProps> = ({ onOpenMapModal }) => {
   const { t } = useSitePreferences();
@@ -94,7 +81,7 @@ export const CongregationsPage: React.FC<CongregationsPageProps> = ({ onOpenMapM
             Filtrar por Província em Angola:
           </span>
           <div className="flex flex-wrap gap-2">
-            {PROVINCES.map(prov => (
+            {(['Todas', ...ANGOLA_PROVINCES] as (Province | 'Todas')[]).map(prov => (
               <button
                 key={prov}
                 onClick={() => setSelectedProvince(prov)}

@@ -25,13 +25,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
             <div className="flex items-center gap-3 pt-2 text-ieca-coral">
               <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">{t('followIeca')}</span>
-              <a href="#" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61594335956813" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="YouTube">
+              <a href="https://www.youtube.com/@jeremiasevaristo8215" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="YouTube">
                 <Youtube className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="Instagram">
+              <a href="https://www.facebook.com/profile.php?id=61594335956813" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 hover:bg-ieca-coral hover:text-white rounded-full transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -45,34 +45,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <button onClick={() => onNavigate('sobre')} className="hover:text-ieca-coral transition-colors">
-                  {t('historyMission')}
+                  História & Sínodos Provinciais
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('conteudos')} className="hover:text-ieca-coral transition-colors flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-ieca-gold"></span>
+                  Artigos & Pregações
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('hinario')} className="hover:text-ieca-coral transition-colors flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-ieca-coral"></span>
-                  {t('digitalHymnal')}
+                  Hinário Digital
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('ministerios')} className="hover:text-ieca-coral transition-colors">
-                  {t('ministriesOrganizations')}
+                <button onClick={() => onNavigate('transmissoes')} className="hover:text-ieca-coral transition-colors flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                  Transmissões Ao Vivo
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('noticias')} className="hover:text-ieca-coral transition-colors">
-                  {t('newsAnnouncements')}
+                <button onClick={() => onNavigate('doacoes')} className="hover:text-ieca-coral transition-colors font-bold text-ieca-gold flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-ieca-gold"></span>
+                  Apoie a IECA (Doações)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('eventos')} className="hover:text-ieca-coral transition-colors">
-                  {t('nationalEvents')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('galeria')} className="hover:text-ieca-coral transition-colors flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-ieca-coral"></span>
-                  {t('photoGallery')}
+                <button onClick={() => onNavigate('galeria')} className="hover:text-ieca-coral transition-colors">
+                  Galeria Fotográfica
                 </button>
               </li>
               <li>

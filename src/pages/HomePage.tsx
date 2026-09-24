@@ -290,9 +290,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {news.map(newsItem => (
-              <NewsCard key={newsItem.id} item={newsItem} onReadMore={() => onNavigate('noticias')} />
+              <div key={newsItem.id}>
+                <NewsCard item={newsItem} onReadMore={() => onNavigate('noticias')} />
+              </div>
             ))}
           </div>
         </div>
@@ -320,9 +322,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </button>
         </div>
 
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map(evt => (
-            <EventCard key={evt.id} item={evt} onSelect={() => onNavigate('eventos')} />
+            <div key={evt.id}>
+              <EventCard item={evt} onSelect={() => onNavigate('eventos')} />
+            </div>
           ))}
         </div>
       </section>
@@ -532,6 +536,33 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
       </section>
 
       {/* ---------------------------------------------------- */}
+      {/* SECTION: SÍNODOS PROVINCIAIS & ÁREAS MISSIONÁRIAS     */}
+      {/* ---------------------------------------------------- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="bg-gradient-to-r from-gray-900 via-ieca-black to-gray-900 text-white p-8 sm:p-10 rounded-card border border-gray-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="space-y-3 max-w-2xl text-center md:text-left z-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-ieca-gold bg-ieca-gold/10 px-3 py-1 rounded-full border border-ieca-gold/20">
+              Estrutura Institucional Regional
+            </span>
+            <h2 className="font-serif font-bold text-2xl sm:text-3xl text-white">
+              Sínodos Provinciais & Áreas Missionárias
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Explore os Sínodos Provinciais (Luanda, Huambo, Bié, Benguela), Áreas Missionárias, Secretários Provinciais e todos os Pastorados associados em Angola com filtro por província.
+            </p>
+          </div>
+
+          <button
+            onClick={() => onNavigate('synodos')}
+            className="z-10 px-6 py-3.5 bg-ieca-coral hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-btn shadow-lg transition-all flex items-center gap-2 whitespace-nowrap"
+          >
+            <span>Ver Sínodos & Pastorados por Província</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
       {/* SECTION 10: MINISTÉRIOS & SOCIEDADES OFICIAIS        */}
       {/* ---------------------------------------------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -553,9 +584,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ministries.map(min => (
-            <MinistryCard key={min.id} item={min} onSelect={() => onNavigate('ministerios')} />
+            <div key={min.id}>
+              <MinistryCard item={min} onSelect={() => onNavigate('ministerios')} />
+            </div>
           ))}
         </div>
       </section>
@@ -577,7 +610,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {socialProjects.map(proj => (
               <div key={proj.id} className="bg-gray-900 rounded-card overflow-hidden border border-gray-800 flex flex-col justify-between hover:border-ieca-coral transition-colors duration-300 shadow-xl">
                 <div className="relative h-44 overflow-hidden">
@@ -628,9 +661,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {resources.map(res => (
-            <ResourceCard key={res.id} item={res} />
+            <div key={res.id}>
+              <ResourceCard item={res} />
+            </div>
           ))}
         </div>
       </section>
@@ -745,9 +780,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div 
-            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/dQw4w9WgXcQ')}
+            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/videoseries?list=PL3x8x6lWJt_y-h-K-K5f3t')}
             className="relative rounded-card overflow-hidden shadow-md cursor-pointer group bg-black h-56"
           >
             <img 
@@ -766,7 +801,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </div>
 
           <div 
-            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/dQw4w9WgXcQ')}
+            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/videoseries?list=PL3x8x6lWJt_y-h-K-K5f3t')}
             className="relative rounded-card overflow-hidden shadow-md cursor-pointer group bg-black h-56"
           >
             <img 
@@ -785,8 +820,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenMapModal }
           </div>
 
           <div 
-            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/dQw4w9WgXcQ')}
-            className="relative rounded-card overflow-hidden shadow-md cursor-pointer group bg-black h-56 sm:col-span-2 lg:col-span-1"
+            onClick={() => setActiveVideoUrl('https://www.youtube.com/embed/videoseries?list=PL3x8x6lWJt_y-h-K-K5f3t')}
+            className="relative rounded-card overflow-hidden shadow-md cursor-pointer group bg-black h-56"
           >
             <img 
               src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" 
