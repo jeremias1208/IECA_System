@@ -67,10 +67,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('doacoes')} className="hover:text-ieca-coral transition-colors font-bold text-ieca-gold flex items-center gap-1.5">
+                {/*<button onClick={() => onNavigate('doacoes')} className="hover:text-ieca-coral transition-colors font-bold text-ieca-gold flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-ieca-gold"></span>
                   Apoie a IECA (Doações)
-                </button>
+                </button>*/}
               </li>
               <li>
                 <button onClick={() => onNavigate('galeria')} className="hover:text-ieca-coral transition-colors">

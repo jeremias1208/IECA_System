@@ -10,7 +10,7 @@ import ernestoChinjenje from './images/Sinodo Provincial de Luanda/Pastor Ernest
 import gervazAbreu from './images/Sinodo Provincial de Luanda/Pastor Gervaz Abreu, Pastor no Pastorado de Boa Vista.jpg';
 import horacioDumbo from './images/Sinodo Provincial de Luanda/Pastor Horácio Dumbo, titular do Pastorado de Nova Alegria-Samba.jpg';
 import jorgeBoaz from './images/Sinodo Provincial de Luanda/Pastor Jorge Boaz, titular do Pastorado de Peregrinos.jpg';
-import jorgeSalomao from './images/Sinodo Provincial de Luanda/Pastor Jorge Salomão, titular do Pastorado de Sião.jpg';
+import jorgeSаломao from './images/Sinodo Provincial de Luanda/Pastor Jorge Salomão, titular do Pastorado de Sião.jpg';
 import linoSambambi from './images/Sinodo Provincial de Luanda/Pastor Lino Sambambi, titular do Pastorado de Ramiros.jpg';
 import lusitanoButica from './images/Sinodo Provincial de Luanda/Pastor Lusitano Nhime Butica, titular do Pastorado de Nova Estrela.jpg';
 import misaelHenriques from './images/Sinodo Provincial de Luanda/Pastor Misael Henriques, titular dos Pastorados de Dama e Boa Vista.jpg';
@@ -27,7 +27,7 @@ import urracaSalomao from './images/Sinodo Provincial de Luanda/Pastora Urraca S
 const LUANDA_SYNOD = 'Sínodo Provincial de Luanda';
 const PASTOR_TITLE = 'Pastor(a) titular';
 
-const pastorate = (id: string, name: string, pastor: string, pastorPhoto: string): Pastorate => ({
+const pastorate = (id: string, name: string, pastor: string,  pastorPhoto: string): Pastorate => ({
   id,
   name,
   location: 'Luanda',
@@ -50,7 +50,7 @@ export const LUANDA_PASTORATES: Pastorate[] = [
   pastorate('luanda-boa-vista', 'Pastorado de Boa Vista', 'Pastor Gervaz Abreu', gervazAbreu),
   pastorate('luanda-nova-alegria', 'Pastorado de Nova Alegria - Samba', 'Pastor Horácio Dumbo', horacioDumbo),
   pastorate('luanda-peregrinos', 'Pastorado de Peregrinos', 'Pastor Jorge Boaz', jorgeBoaz),
-  pastorate('luanda-siao-jorge', 'Pastorado de Sião', 'Pastor Jorge Salomão', jorgeSalomao),
+  pastorate('luanda-siao-jorge', 'Pastorado de Sião', 'Pastor Jorge Salomão', jorgeSаломao),
   pastorate('luanda-ramiros', 'Pastorado de Ramiros', 'Pastor Lino Sambambi', linoSambambi),
   pastorate('luanda-nova-estrela', 'Pastorado de Nova Estrela', 'Pastor Lusitano Nhime Butica', lusitanoButica),
   pastorate('luanda-dama', 'Pastorado de Dama', 'Pastor Misael Henriques', misaelHenriques),

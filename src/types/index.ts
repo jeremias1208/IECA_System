@@ -1,26 +1,26 @@
 export type Province = 
-  | 'Luanda' 
-  | 'Huambo' 
-  | 'Benguela' 
-  | 'Huíla' 
-  | 'Bié' 
-  | 'Cabinda' 
-  | 'Cuanza Sul' 
-  | 'Cuanza Norte'
-  | 'Malanje' 
-  | 'Namibe' 
-  | 'Uíge'
-  | 'Bengo'
-  | 'Cuando'
-  | 'Cubango'
-  | 'Cunene'
-  | 'Icolo e Bengo'
-  | 'Lunda Norte'
-  | 'Lunda Sul'
-  | 'Moxico'
-  | 'Moxico Leste'
-  | 'Zaire'
-  | string;
+  'Todas'
+  |'Bengo'
+ |'Benguela'
+  |'Bié'
+  |'Cabinda'
+  |'Cuando'
+  |'Cubango'
+  |'Cuanza Norte'
+  |'Cuanza Sul'
+  |'Cunene'
+  |'Huambo'
+  |'Huíla'
+  |'Icolo e Bengo'
+  |'Luanda'
+  |'Lunda Norte'
+  |'Lunda Sul'
+  |'Malanje'
+  |'Moxico'
+  |'Moxico Leste'
+  |'Namibe'
+  |'Uíge'
+  |'Zaire'
 
 export type CongregationStatus = 'ATIVA' | 'A_VALIDAR' | 'INATIVA' | 'NAO_CONFIRMADA';
 
@@ -242,6 +242,9 @@ export interface Pastorate {
   pastor: string;
   establishedYear?: number;
   contact?: string;
+  pastorTitle?: string;
+  pastorPhoto?: string;
+  synod?: string;
 }
 
 export interface ProvincialSynod {
