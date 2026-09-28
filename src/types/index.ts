@@ -245,6 +245,19 @@ export interface Pastorate {
   pastorTitle?: string;
   pastorPhoto?: string;
   synod?: string;
+  // ── Informação enriquecida ──────────────────────
+  description?: string;
+  address?: string;
+  email?: string;
+  phone?: string;
+  neighborhoods?: string[];
+  membersCount?: number;
+  congregationsCount?: number;
+  congregationsList?: string[];
+  serviceSchedule?: { day: string; time: string; type: string }[];
+  localSynod?: string; // Sínodo Local (ex: Norte, Samba, Viana)
+  isLocalSynodDirector?: boolean;
+  adjunto?: boolean;
 }
 
 export interface ProvincialSynod {

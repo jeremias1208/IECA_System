@@ -22,6 +22,42 @@ import festividadesJubilaresPhoto from './images/FESTIVIDADES JUBILARES DE 2027.
 import ensaios from './images/image.png';
 import oseias from './images/oseiass.jpg';
 
+// ── Fotos reais dos Secretários Provinciais ────────────────────────
+import imgSpOvidio    from './images/Secretarios Provincial/REVERENDO OVÍDIO DE FREITAS CHISSENGUE, NOSSO LÍDER PROVINCIAL.jpg';
+import imgSpElias     from './images/Secretarios Provincial/Rev. Elias Hossi Sapato, Secretário provincial noUíge..jpg';
+import imgSpFrancisco from './images/Secretarios Provincial/Rev. Francisco Doído Secretário Provincial da IECA no Icolo e Bengo..jpg';
+import imgSpFrancio   from './images/Secretarios Provincial/Rev. Frâncio Calufele, Secretário Provincial da IECA no Bengo..jpg';
+import imgSpJulio     from './images/Secretarios Provincial/Rev. Júlio Ulundo, Secretário Provincial da IECA em Malanje..jpg';
+import imgSpLaurindo  from './images/Secretarios Provincial/Rev. Laurindo Juliano Cangombe, Secretário Provincial da IECA no Namibe..jpg';
+import imgSpLucio     from './images/Secretarios Provincial/Rev. Lúcio Marques, Secretário Provincial da IECA no Cuanza Norte..jpg';
+
+// ── Fotos dos Pastores do Sínodo Provincial de Luanda ──────────────
+import imgPastorAbel         from './images/Sinodo Provincial de Luanda/Pastor Abel Hungulo, titular do Pastorado de Samaria.jpg';
+import imgPastorAbias        from './images/Sinodo Provincial de Luanda/Pastor Abias Cauto, titular do Pastorado de Nova Vida.jpg';
+import imgPastorArnaldo      from './images/Sinodo Provincial de Luanda/Pastor Arnaldo Cambonguele Mário titular do pastorado de Bereia.jpg';
+import imgPastorArtur        from './images/Sinodo Provincial de Luanda/Pastor Artur Sanana, titular do Pastorado de Jericó.jpg';
+import imgPastorAzevedo      from './images/Sinodo Provincial de Luanda/Pastor Azevedo Bango Gueve, titular do Pastorado de Monte Moriá -Viana.jpg';
+import imgPastorBonifacio    from './images/Sinodo Provincial de Luanda/Pastor Bonifácio Cassoma, titular do Pastorado de Boa Nova.jpg';
+import imgPastorEdgar        from './images/Sinodo Provincial de Luanda/Pastor Edgar Ernesto da Silva, titular do Pastorado de Emanuel e Director do Sínodo Local Norte.jpg';
+import imgPastorErnesto      from './images/Sinodo Provincial de Luanda/Pastor Ernesto Ngonga Chinjenje, titular do Pastorado de Filadélfia-Viana.jpg';
+import imgPastorGervaz       from './images/Sinodo Provincial de Luanda/Pastor Gervaz Abreu, Pastor no Pastorado de Boa Vista.jpg';
+import imgPastorHoracio      from './images/Sinodo Provincial de Luanda/Pastor Horácio Dumbo, titular do Pastorado de Nova Alegria-Samba.jpg';
+import imgPastorJorgeBoaz    from './images/Sinodo Provincial de Luanda/Pastor Jorge Boaz, titular do Pastorado de Peregrinos.jpg';
+import imgPastorJorgeSalomao from './images/Sinodo Provincial de Luanda/Pastor Jorge Salomão, titular do Pastorado de Sião.jpg';
+import imgPastorLino         from './images/Sinodo Provincial de Luanda/Pastor Lino Sambambi, titular do Pastorado de Ramiros.jpg';
+import imgPastorLusitano     from './images/Sinodo Provincial de Luanda/Pastor Lusitano Nhime Butica, titular do Pastorado de Nova Estrela.jpg';
+import imgPastorMisael       from './images/Sinodo Provincial de Luanda/Pastor Misael Henriques, titular dos Pastorados de Dama e Boa Vista.jpg';
+import imgPastorNoe          from './images/Sinodo Provincial de Luanda/Pastor Noé Kussivila, titular do Pastorado de Betel.jpg';
+import imgPastorPedroJulio   from './images/Sinodo Provincial de Luanda/Pastor Pedro Júlio Canivete de Andrade, Secretário Provincial adjunto e titular do Pastorado de Vista Alegre - Director do Sínodo Local da Samba.jpg';
+import imgPastorPedroSantos  from './images/Sinodo Provincial de Luanda/Pastor Pedro Santos Catumbela, titular do Pastorado de São João.jpg';
+import imgPastorQuerido      from './images/Sinodo Provincial de Luanda/Pastor Querido Capinãla, titular do Pastorado de Palestina.jpg';
+import imgPastoraJosefina    from './images/Sinodo Provincial de Luanda/Pastora Josefina Ilda Hungulo, titular do Pastorado de Belo Monte.jpg';
+import imgPastoraPaulina     from './images/Sinodo Provincial de Luanda/Pastora Paulina Caholo Abreu, titular do Pastorado de Bela Vista.jpg';
+import imgPastoraRode        from './images/Sinodo Provincial de Luanda/Pastora Rode Mário, titular dos Pastorados de Boa Esperança e Caridade, Directora do Sínodo Local de Viana.jpg';
+import imgPastoraTeresa      from './images/Sinodo Provincial de Luanda/Pastora Teresa Gerente Eurico, titular do Pastorado de Monte Sinai.jpg';
+import imgPastoraUrraca      from './images/Sinodo Provincial de Luanda/Pastora Urraca Salomão - Pastora no Pastorado de Sião.jpg';
+
+
 export const MOCK_CONGREGATIONS: Congregation[] = [
   {
     id: 'cong-1',
@@ -756,26 +792,8 @@ export const MOCK_GALLERY_ITEMS = [
     category: 'Diversos & Outros' as const,
     year: '2026',
     location: 'Sede Nacional, Belas',
-    imageUrl: secretariosPhoto,
-    description: 'Reunião de trabalho e fraternidade entre a liderança executiva e diretores de departamentos da igreja.'
-  },
-  {
-    id: 'gal-9',
-    title: 'Corpo Pastoral Congregacional em Luanda',
-    category: 'Diversos & Outros' as const,
-    year: '2026',
-    location: 'Morro Bento II',
     imageUrl: pastoresPhotp,
     description: 'Registo fotográfico do corpo pastoral congregacional durante a jornada de formação contínua.'
-  },
-  {
-    id: 'gal-10',
-    title: 'Paisagem da Comunidade de Belas no Por do Sol',
-    category: 'Diversos & Outros' as const,
-    year: '2026',
-    location: 'Belas, Luanda',
-    imageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800',
-    description: 'Vista panorâmica do pôr do sol nos arredores da Sede Nacional da IECA no Morro Bento.'
   }
 ];
 
@@ -785,18 +803,408 @@ export const MOCK_SYNODS: ProvincialSynod[] = [
     name: 'Sínodo Provincial de Luanda',
     regionType: 'Sínodo Provincial',
     province: 'Luanda',
-    secretaryName: 'Rev. Pedro Chicassa',
+    secretaryName: 'Rev. Ovídio de Freitas Chissengue',
     secretaryTitle: 'Secretário Provincial / Representante Legal',
-    secretaryPhoto: secretarioExecutivoPhoto,
+    secretaryPhoto: imgSpOvidio,
     secretaryBio: 'Servo de Deus com mais de 25 anos de ministério pastoral, liderando a edificação espiritual e expansão missionária das congregações na Província de Luanda.',
     headquarters: 'Morro Bento II, Belas, Luanda',
     email: 'sinodo.luanda@ieca.ao',
     phone: '+244 923 111 222',
     pastorates: [
-      { id: 'past-1', name: 'Pastorado Urbano de Luanda (Igreja Central)', location: 'Morro Bento, Belas', province: 'Luanda', pastor: 'Rev. Pedro Chicassa', establishedYear: 1975 },
-      { id: 'past-2', name: 'Pastorado de Viana', location: 'Viana Sede', province: 'Luanda', pastor: 'Rev. Joaquim Vunge', establishedYear: 1988 },
-      { id: 'past-3', name: 'Pastorado de Cacuaco', location: 'Cacuaco Centro', province: 'Luanda', pastor: 'Rev.ª Ana Isabel', establishedYear: 1995 },
-      { id: 'past-4', name: 'Pastorado de Cazenga', location: 'Tala Hady, Cazenga', province: 'Luanda', pastor: 'Pastor Simão Pedro', establishedYear: 2002 }
+      {
+        id: 'past-lda-01',
+        name: 'Pastorado de Samaria',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Abel Hungulo',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorAbel,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Samaria, localizado em Luanda, serve activamente as comunidades congregacionais sob a supervisão do Sínodo Provincial.',
+        neighborhoods: ['Samaria'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '08:30 - 11:00', type: 'Culto Principal de Louvor e Adoração' },
+          { day: 'Quarta-feira', time: '17:00 - 18:30', type: 'Culto de Oração e Estudo Bíblico' }
+        ]
+      },
+      {
+        id: 'past-lda-02',
+        name: 'Pastorado de Nova Vida',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Abias Cauto',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorAbias,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Nova Vida congrega fiéis comprometidos com a transformação espiritual e comunitária de Luanda.',
+        neighborhoods: ['Nova Vida'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical de Adoração' },
+          { day: 'Sexta-feira', time: '18:00 - 19:30', type: 'Culto de Oração Familiar' }
+        ]
+      },
+      {
+        id: 'past-lda-03',
+        name: 'Pastorado de Bereia',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Arnaldo Cambonguele Mário',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorArnaldo,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Bereia, pautado pelo estudo aprofundado da Palavra de Deus e pelo discipulado contínuo dos seus membros.',
+        neighborhoods: ['Bereia'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '17:30 - 19:00', type: 'Estudo Bíblico' }
+        ]
+      },
+      {
+        id: 'past-lda-04',
+        name: 'Pastorado de Jericó',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Artur Sanana',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorArtur,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Jericó é reconhecido pela sua acção evangelística e pelo trabalho pastoral junto das famílias.',
+        neighborhoods: ['Jericó'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '08:30 - 10:30', type: 'Culto de Adoração' },
+          { day: 'Terça-feira', time: '18:00 - 19:30', type: 'Reunião de Jovens' }
+        ]
+      },
+      {
+        id: 'past-lda-05',
+        name: 'Pastorado de Monte Moriá',
+        location: 'Viana, Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Azevedo Bango Gueve',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorAzevedo,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local de Viana',
+        description: 'O Pastorado de Monte Moriá — Viana está comprometido com o crescimento espiritual das comunidades na zona de Viana.',
+        neighborhoods: ['Monte Moriá', 'Viana'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Principal' },
+          { day: 'Quinta-feira', time: '17:00 - 18:30', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-06',
+        name: 'Pastorado de Boa Nova',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Bonifácio Cassoma',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorBonifacio,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Boa Nova, um sinal de esperança e renovação espiritual para os fiéis da sua área de influência.',
+        neighborhoods: ['Boa Nova'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '18:00 - 19:30', type: 'Estudo e Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-07',
+        name: 'Pastorado de Emanuel',
+        location: 'Luanda Norte',
+        province: 'Luanda',
+        pastor: 'Pastor Edgar Ernesto da Silva',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorEdgar,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local Norte',
+        isLocalSynodDirector: true,
+        description: 'O Pastorado de Emanuel, liderado pelo Director do Sínodo Local Norte, coordena a expansão eclesial na zona norte de Luanda.',
+        neighborhoods: ['Emanuel', 'Luanda Norte'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '08:00 - 10:30', type: 'Culto Principal' },
+          { day: 'Sábado', time: '15:00 - 17:00', type: 'Reunião de Juventude' }
+        ]
+      },
+      {
+        id: 'past-lda-08',
+        name: 'Pastorado de Filadélfia',
+        location: 'Viana, Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Ernesto Ngonga Chinjenje',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorErnesto,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local de Viana',
+        description: 'O Pastorado de Filadélfia — Viana, é um centro de missão ativa, com forte ação social e de evangelização na zona de Viana.',
+        neighborhoods: ['Filadélfia', 'Viana'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '18:00 - 19:30', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-09',
+        name: 'Pastorado de Boa Vista',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Gervaz Abreu',
+        pastorTitle: 'Pastor',
+        pastorPhoto: imgPastorGervaz,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Boa Vista é um espaço de comunhão e crescimento espiritual para as famílias da zona.',
+        neighborhoods: ['Boa Vista'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:30 - 11:30', type: 'Culto Dominical' },
+          { day: 'Sexta-feira', time: '18:00 - 19:30', type: 'Encontro de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-10',
+        name: 'Pastorado de Nova Alegria',
+        location: 'Samba, Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Horácio Dumbo',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorHoracio,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local da Samba',
+        description: 'Pastorado de Nova Alegria — Samba, servindo as comunidades com alegria e dedicação ao evangelho.',
+        neighborhoods: ['Nova Alegria', 'Samba'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Principal' },
+          { day: 'Quinta-feira', time: '18:00 - 19:30', type: 'Culto de Jovens' }
+        ]
+      },
+      {
+        id: 'past-lda-11',
+        name: 'Pastorado de Peregrinos',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Jorge Boaz',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorJorgeBoaz,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Peregrinos acompanha o percurso espiritual dos seus membros com fidelidade à Palavra e ao serviço comunitário.',
+        neighborhoods: ['Peregrinos'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '08:30 - 11:00', type: 'Culto de Adoração' },
+          { day: 'Quarta-feira', time: '17:30 - 19:00', type: 'Estudo Bíblico' }
+        ]
+      },
+      {
+        id: 'past-lda-12',
+        name: 'Pastorado de Sião',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Jorge Salomão',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorJorgeSalomao,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Sião, um nome que evoca a presença de Deus e a centralidade do louvor na vida congregacional.',
+        neighborhoods: ['Sião'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical' },
+          { day: 'Sexta-feira', time: '18:00 - 19:30', type: 'Oração e Louvor' }
+        ]
+      },
+      {
+        id: 'past-lda-13',
+        name: 'Pastorado de Ramiros',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Lino Sambambi',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorLino,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Ramiros, com uma comunidade activa e comprometida no seu bairro de influência.',
+        neighborhoods: ['Ramiros'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Principal' },
+          { day: 'Quarta-feira', time: '17:30 - 19:00', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-14',
+        name: 'Pastorado de Nova Estrela',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Lusitano Nhime Butica',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorLusitano,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Nova Estrela brilha na expansão do evangelho e no fortalecimento das famílias cristãs.',
+        neighborhoods: ['Nova Estrela'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical' },
+          { day: 'Terça-feira', time: '18:00 - 19:30', type: 'Reunião Familiar' }
+        ]
+      },
+      {
+        id: 'past-lda-15',
+        name: 'Pastorado de Dama e Boa Vista',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Misael Henriques',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorMisael,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastor Misael Henriques lidera os Pastorados de Dama e Boa Vista, assegurando a cobertura pastoral em duas comunidades irmãs.',
+        neighborhoods: ['Dama', 'Boa Vista'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '18:00 - 19:30', type: 'Estudo e Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-16',
+        name: 'Pastorado de Betel',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Noé Kussivila',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorNoe,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'Pastorado de Betel — "Casa de Deus" — um lugar de encontro espiritual e comunhão profunda entre os seus membros.',
+        neighborhoods: ['Betel'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '08:30 - 11:00', type: 'Culto de Adoração' },
+          { day: 'Quinta-feira', time: '18:00 - 19:30', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-17',
+        name: 'Pastorado de Vista Alegre',
+        location: 'Samba, Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Pedro Júlio Canivete de Andrade',
+        pastorTitle: 'Pastor Titular / Sec. Provincial Adjunto',
+        pastorPhoto: imgPastorPedroJulio,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local da Samba',
+        isLocalSynodDirector: true,
+        adjunto: true,
+        description: 'Pastor Pedro Júlio Canivete de Andrade é Secretário Provincial Adjunto e Director do Sínodo Local da Samba, combinando liderança pastoral e administrativa.',
+        neighborhoods: ['Vista Alegre', 'Samba'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Principal' },
+          { day: 'Sábado', time: '15:00 - 17:00', type: 'Reunião de Jovens' }
+        ]
+      },
+      {
+        id: 'past-lda-18',
+        name: 'Pastorado de São João',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Pedro Santos Catumbela',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorPedroSantos,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de São João é referência de solidariedade cristã e serviço à comunidade no seu bairro de actuação.',
+        neighborhoods: ['São João'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '18:00 - 19:30', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-19',
+        name: 'Pastorado de Palestina',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastor Querido Capinãla',
+        pastorTitle: 'Pastor Titular',
+        pastorPhoto: imgPastorQuerido,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Palestina é um centro activo de evangelização e acção social na sua zona de influência.',
+        neighborhoods: ['Palestina'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Dominical' },
+          { day: 'Sexta-feira', time: '18:00 - 19:30', type: 'Oração e Louvor' }
+        ]
+      },
+      {
+        id: 'past-lda-20',
+        name: 'Pastorado de Belo Monte',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastora Josefina Ilda Hungulo',
+        pastorTitle: 'Pastora Titular',
+        pastorPhoto: imgPastoraJosefina,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'A Pastora Josefina Ilda Hungulo lidera o Pastorado de Belo Monte com dedicação e amor ao serviço dos seus membros.',
+        neighborhoods: ['Belo Monte'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Principal' },
+          { day: 'Quarta-feira', time: '18:00 - 19:30', type: 'Estudo Bíblico' }
+        ]
+      },
+      {
+        id: 'past-lda-21',
+        name: 'Pastorado de Bela Vista',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastora Paulina Caholo Abreu',
+        pastorTitle: 'Pastora Titular',
+        pastorPhoto: imgPastoraPaulina,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'A Pastora Paulina Caholo Abreu pastoreia com excelência o Pastorado de Bela Vista, promovendo a fé e a unidade familiar.',
+        neighborhoods: ['Bela Vista'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Dominical' },
+          { day: 'Quinta-feira', time: '18:00 - 19:30', type: 'Reunião Familiar' }
+        ]
+      },
+      {
+        id: 'past-lda-22',
+        name: 'Pastorado de Boa Esperança e Caridade',
+        location: 'Viana, Luanda',
+        province: 'Luanda',
+        pastor: 'Pastora Rode Mário',
+        pastorTitle: 'Pastora Titular / Directora do Sínodo Local',
+        pastorPhoto: imgPastoraRode,
+        synod: 'Sínodo Provincial de Luanda',
+        localSynod: 'Sínodo Local de Viana',
+        isLocalSynodDirector: true,
+        description: 'A Pastora Rode Mário, Directora do Sínodo Local de Viana, lidera os Pastorados de Boa Esperança e Caridade com visão e comprometimento.',
+        neighborhoods: ['Boa Esperança', 'Caridade', 'Viana'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Principal' },
+          { day: 'Sábado', time: '15:00 - 17:00', type: 'Reunião de Mulheres' }
+        ]
+      },
+      {
+        id: 'past-lda-23',
+        name: 'Pastorado de Monte Sinai',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastora Teresa Gerente Eurico',
+        pastorTitle: 'Pastora Titular',
+        pastorPhoto: imgPastoraTeresa,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'O Pastorado de Monte Sinai é um espaço de encontro com Deus, enraizado na oração e no ensino da Palavra.',
+        neighborhoods: ['Monte Sinai'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:00', type: 'Culto Dominical' },
+          { day: 'Quarta-feira', time: '17:30 - 19:00', type: 'Culto de Oração' }
+        ]
+      },
+      {
+        id: 'past-lda-24',
+        name: 'Pastorado de Sião',
+        location: 'Luanda',
+        province: 'Luanda',
+        pastor: 'Pastora Urraca Salomão',
+        pastorTitle: 'Pastora',
+        pastorPhoto: imgPastoraUrraca,
+        synod: 'Sínodo Provincial de Luanda',
+        description: 'A Pastora Urraca Salomão serve fielmente no Pastorado de Sião, fortalecendo a vida espiritual dos seus membros.',
+        neighborhoods: ['Sião'],
+        serviceSchedule: [
+          { day: 'Domingo', time: '09:00 - 11:30', type: 'Culto Principal' },
+          { day: 'Sexta-feira', time: '18:00 - 19:30', type: 'Oração e Louvor' }
+        ]
+      }
     ]
   },
   {
@@ -863,13 +1271,109 @@ export const MOCK_SYNODS: ProvincialSynod[] = [
     secretaryName: 'Rev. Mateus Cassela',
     secretaryTitle: 'Representante Legal de Missão',
     secretaryPhoto: secretariosPhoto,
-    secretaryBio: 'Coordena o trabalho pioneiro e plantação de congregações no leste do país, focado na expansão evangelística e apoio social.',
+    secretaryBio: 'Coordena o trabalho pioneiro e plantação de congregações no leste do país, focado na expansão evangélística e apoio social.',
     headquarters: 'Saurimo, Lunda Sul',
     email: 'missao.leste@ieca.ao',
     phone: '+244 923 999 000',
     pastorates: [
       { id: 'past-16', name: 'Pastorado Urbano de Saurimo', location: 'Saurimo Sede', province: 'Luanda', pastor: 'Rev. Mateus Cassela', establishedYear: 2005 },
       { id: 'past-17', name: 'Pastorado Missionário de Luena', location: 'Luena, Moxico', province: 'Luanda', pastor: 'Pastor Gabriel Soma', establishedYear: 2012 }
+    ]
+  },
+  {
+    id: 'sin-6',
+    name: 'Sínodo Provincial do Uíge',
+    regionType: 'Sínodo Provincial',
+    province: 'Uíge',
+    secretaryName: 'Rev. Elias Hossi Sapato',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpElias,
+    secretaryBio: 'Líder da circunscrição eclesial do Uíge, promovendo a expansão missionária e a consolição das congregações no norte de Angola.',
+    headquarters: 'Uíge Cidade',
+    email: 'sinodo.uige@ieca.ao',
+    phone: '+244 923 200 300',
+    pastorates: [
+      { id: 'past-18', name: 'Pastorado Urbano do Uíge', location: 'Uíge Sede', province: 'Uíge', pastor: 'Rev. Elias Hossi Sapato', establishedYear: 2000 }
+    ]
+  },
+  {
+    id: 'sin-7',
+    name: 'Sínodo Provincial do Icolo e Bengo',
+    regionType: 'Sínodo Provincial',
+    province: 'Luanda',
+    secretaryName: 'Rev. Francisco Doído',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpFrancisco,
+    secretaryBio: 'Responsável pela jurisdição eclesial do Icolo e Bengo, com foco na atenção pastoral às comunidades rurais e periurbanas.',
+    headquarters: 'Icolo e Bengo',
+    email: 'sinodo.icolobengo@ieca.ao',
+    phone: '+244 923 400 500',
+    pastorates: [
+      { id: 'past-19', name: 'Pastorado do Icolo e Bengo', location: 'Icolo e Bengo Sede', province: 'Luanda', pastor: 'Rev. Francisco Doído', establishedYear: 2003 }
+    ]
+  },
+  {
+    id: 'sin-8',
+    name: 'Sínodo Provincial do Bengo',
+    regionType: 'Sínodo Provincial',
+    province: 'Bengo',
+    secretaryName: 'Rev. Frâncio Calufele',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpFrancio,
+    secretaryBio: 'Lídera a circunscrição eclesial do Bengo, supervisionando as congregações na margem norte do rio Bengo e áreas adjacentes.',
+    headquarters: 'Caxito, Bengo',
+    email: 'sinodo.bengo@ieca.ao',
+    phone: '+244 923 600 700',
+    pastorates: [
+      { id: 'past-20', name: 'Pastorado de Caxito', location: 'Caxito Sede', province: 'Bengo', pastor: 'Rev. Frâncio Calufele', establishedYear: 2001 }
+    ]
+  },
+  {
+    id: 'sin-9',
+    name: 'Sínodo Provincial de Malanje',
+    regionType: 'Sínodo Provincial',
+    province: 'Malanje',
+    secretaryName: 'Rev. Júlio Ulundo',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpJulio,
+    secretaryBio: 'Lidera a expansão evangelista em Malanje, assegurando o crescimento espiritual e comunitário das congregações na região norte-leste.',
+    headquarters: 'Malanje Cidade',
+    email: 'sinodo.malanje@ieca.ao',
+    phone: '+244 923 800 900',
+    pastorates: [
+      { id: 'past-21', name: 'Pastorado de Malanje', location: 'Malanje Sede', province: 'Malanje', pastor: 'Rev. Júlio Ulundo', establishedYear: 1999 }
+    ]
+  },
+  {
+    id: 'sin-10',
+    name: 'Sínodo Provincial do Namibe',
+    regionType: 'Sínodo Provincial',
+    province: 'Namibe',
+    secretaryName: 'Rev. Laurindo Juliano Cangombe',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpLaurindo,
+    secretaryBio: 'Coordena a missão no sul de Angola, com especial atenção às comunidades costeiras e do interior do Namibe.',
+    headquarters: 'Namibe Cidade',
+    email: 'sinodo.namibe@ieca.ao',
+    phone: '+244 923 150 250',
+    pastorates: [
+      { id: 'past-22', name: 'Pastorado do Namibe', location: 'Namibe Sede', province: 'Namibe', pastor: 'Rev. Laurindo Juliano Cangombe', establishedYear: 2004 }
+    ]
+  },
+  {
+    id: 'sin-11',
+    name: 'Sínodo Provincial do Cuanza Norte',
+    regionType: 'Sínodo Provincial',
+    province: 'Cuanza Norte',
+    secretaryName: 'Rev. Lúcio Marques',
+    secretaryTitle: 'Secretário Provincial',
+    secretaryPhoto: imgSpLucio,
+    secretaryBio: 'Respónsavel pelo pastorado e expansão eclesial no Cuanza Norte, promovendo a solidariedade comunitária e o ensino bíblico na região.',
+    headquarters: 'N’dalatando, Cuanza Norte',
+    email: 'sinodo.cuanzanorte@ieca.ao',
+    phone: '+244 923 350 450',
+    pastorates: [
+      { id: 'past-23', name: 'Pastorado de N’dalatando', location: 'N’dalatando Sede', province: 'Cuanza Norte', pastor: 'Rev. Lúcio Marques', establishedYear: 2006 }
     ]
   }
 ];

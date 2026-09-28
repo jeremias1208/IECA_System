@@ -33,6 +33,15 @@ import imgChissamba          from '../data/images/MissaoEvangelicaChissamba.jpg'
 import imgChilesso           from '../data/images/MissaoEvangelicaChilesso.jpg';
 import imgElende             from '../data/images/MissaoEvangelicaELende.jpg';
 
+// ── Secretários Provinciais ───────────────────────────────────
+import imgOvidio    from '../data/images/Secretarios Provincial/REVERENDO OVÍDIO DE FREITAS CHISSENGUE, NOSSO LÍDER PROVINCIAL.jpg';
+import imgElias     from '../data/images/Secretarios Provincial/Rev. Elias Hossi Sapato, Secretário provincial noUíge..jpg';
+import imgFrancisco from '../data/images/Secretarios Provincial/Rev. Francisco Doído Secretário Provincial da IECA no Icolo e Bengo..jpg';
+import imgFrancio   from '../data/images/Secretarios Provincial/Rev. Frâncio Calufele, Secretário Provincial da IECA no Bengo..jpg';
+import imgJulio     from '../data/images/Secretarios Provincial/Rev. Júlio Ulundo, Secretário Provincial da IECA em Malanje..jpg';
+import imgLaurindo  from '../data/images/Secretarios Provincial/Rev. Laurindo Juliano Cangombe, Secretário Provincial da IECA no Namibe..jpg';
+import imgLucio     from '../data/images/Secretarios Provincial/Rev. Lúcio Marques, Secretário Provincial da IECA no Cuanza Norte..jpg';
+
 /* ─────────────────────────────────────────────
    TYPES
    ───────────────────────────────────────────── */
@@ -133,6 +142,66 @@ const JUVENTUDE_PHOTOS: GalleryPhoto[] = [
   }
 ];
 
+/** Secção 3b: Secretários Provinciais */
+const SECRETARIOS_PROV_PHOTOS: GalleryPhoto[] = [
+  {
+    id: 'sp-01',
+    title: 'Rev. Ovídio de Freitas Chissengue',
+    description: 'Secretário Provincial — líder provincial da IECA.',
+    src: imgOvidio,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-02',
+    title: 'Rev. Elias Hossi Sapato',
+    description: 'Secretário Provincial da IECA no Uíge.',
+    src: imgElias,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-03',
+    title: 'Rev. Francisco Doído',
+    description: 'Secretário Provincial da IECA no Icolo e Bengo.',
+    src: imgFrancisco,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-04',
+    title: 'Rev. Frâncio Calufele',
+    description: 'Secretário Provincial da IECA no Bengo.',
+    src: imgFrancio,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-05',
+    title: 'Rev. Júlio Ulundo',
+    description: 'Secretário Provincial da IECA em Malanje.',
+    src: imgJulio,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-06',
+    title: 'Rev. Laurindo Juliano Cangombe',
+    description: 'Secretário Provincial da IECA no Namibe.',
+    src: imgLaurindo,
+    year: '2025',
+    category: 'secretarios-prov'
+  },
+  {
+    id: 'sp-07',
+    title: 'Rev. Lúcio Marques',
+    description: 'Secretário Provincial da IECA no Cuanza Norte.',
+    src: imgLucio,
+    year: '2025',
+    category: 'secretarios-prov'
+  }
+];
+
 /** Secção 4: Património e Edifícios */
 const PATRIMONIO_PHOTOS: GalleryPhoto[] = [
   {
@@ -192,6 +261,13 @@ const GALLERY_SECTIONS: GallerySection[] = [
     icon: <Star className="w-5 h-5" />,
     description: 'Registo fotográfico dos líderes institucionais da IECA — Secretários-Gerais, Executivos e responsáveis sinodais.',
     photos: LIDERANCA_PHOTOS
+  },
+  {
+    id: 'secretarios-prov',
+    label: 'Secretários Provinciais',
+    icon: <Users className="w-5 h-5" />,
+    description: 'Galeria fotográfica dos Secretários Provinciais da IECA — Representantes Legais e líderes pastorais em cada província de Angola.',
+    photos: SECRETARIOS_PROV_PHOTOS
   },
   {
     id: 'cultos',
@@ -350,10 +426,11 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ photo, onClick }) => (
    SECTION BLOCK
    ───────────────────────────────────────────── */
 const ACCENT_MAP: Record<string, string> = {
-  lideranca: 'text-amber-700 bg-amber-50 border-amber-200',
-  cultos:    'text-ieca-coral bg-ieca-coral/10 border-ieca-coral/20',
-  juventude: 'text-ieca-green bg-ieca-green/10 border-ieca-green/20',
-  patrimonio:'text-blue-700 bg-blue-50 border-blue-200',
+  lideranca:          'text-amber-700 bg-amber-50 border-amber-200',
+  'secretarios-prov': 'text-purple-700 bg-purple-50 border-purple-200',
+  cultos:             'text-ieca-coral bg-ieca-coral/10 border-ieca-coral/20',
+  juventude:          'text-ieca-green bg-ieca-green/10 border-ieca-green/20',
+  patrimonio:         'text-blue-700 bg-blue-50 border-blue-200',
 };
 
 interface GallerySectionBlockProps {
